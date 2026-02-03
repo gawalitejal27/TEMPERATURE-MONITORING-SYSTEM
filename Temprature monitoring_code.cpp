@@ -2,7 +2,7 @@
 
 // LCD pins: RS, EN, D4, D5, D6, D7
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
-
+// tempin
 int tempPin = A0;
 
 void setup() {
@@ -11,7 +11,10 @@ void setup() {
 
   lcd.setCursor(0, 0);
   lcd.print("Temp Monitor");
-  delay(2000);
+
+
+
+  delay(5000);
   lcd.clear();
 }
 
@@ -31,9 +34,14 @@ void loop() {
   lcd.print(tempF);
 
   Serial.print("Temp in C: ");
+
+
   Serial.print(tempC);
   Serial.print("  Temp in F: ");
+
   Serial.println(tempF);
 
-  delay(1000);
+
+
+  delay(5000);
 }
